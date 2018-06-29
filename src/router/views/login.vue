@@ -47,7 +47,7 @@ export default {
 <template>
   <Layout>
     <form
-      :class="$style.form"
+      :class="form"
       @submit.prevent="tryToLogIn"
     >
       <BaseInput
@@ -76,11 +76,3 @@ export default {
     </form>
   </Layout>
 </template>
-
-<style lang="scss" module>
-@import '@design';
-
-.form {
-  text-align: center;
-}
-</style>

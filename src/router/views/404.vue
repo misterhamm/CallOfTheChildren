@@ -18,7 +18,7 @@ export default {
 
 <template>
   <Layout>
-    <h1 :class="$style.title">
+    <h1 :class="title">
       404
       <span v-if="resource">
         {{ resource }}
@@ -27,9 +27,3 @@ export default {
     </h1>
   </Layout>
 </template>
-
-<style lang="scss" module>
-.title {
-  text-align: center;
-}
-</style>

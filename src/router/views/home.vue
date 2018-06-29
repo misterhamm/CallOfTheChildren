@@ -4,7 +4,7 @@ import Layout from '@layouts/main'
 
 export default {
   page: {
-    title: 'Home',
+    title: 'Call Of The Children',
     meta: [{ name: 'description', content: appConfig.description }],
   },
   components: { Layout },
@@ -13,7 +13,7 @@ export default {
 
 <template>
   <Layout>
-    <h1>Home Page</h1>
+    <h1>Call Of The Children</h1>
     <img
       src="@assets/images/logo.png"
       alt="Logo"
