@@ -37,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <ul :class="$style.container">
+  <ul class="container">
     <NavBarRoutes :routes="persistentNavRoutes"/>
     <NavBarRoutes
       v-if="loggedIn"
@@ -49,19 +49,3 @@ export default {
     />
   </ul>
 </template>
-
-<style lang="scss" module>
-@import '@design';
-
-.container {
-  padding: 0;
-  margin: 0 0 $size-grid-padding;
-  text-align: center;
-  list-style-type: none;
-
-  > li {
-    display: inline-block;
-    margin-right: $size-grid-padding;
-  }
-}
-</style>

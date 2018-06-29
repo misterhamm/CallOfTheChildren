@@ -1,0 +1,40 @@
+﻿/// <reference path="../utils/_variables.scss" />
+/// <reference path="../utils/mixins/_general.scss" />
+
+@keyframes slideInLeft {
+	from {
+		-moz-transform: translate3d(-100%, 0, 0);
+		-ms-transform: translate3d(-100%, 0, 0);
+		-o-transform: translate3d(-100%, 0, 0);
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		-moz-transform: translate3d(100%, 0, 0);
+		-ms-transform: translate3d(100%, 0, 0);
+		-o-transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}

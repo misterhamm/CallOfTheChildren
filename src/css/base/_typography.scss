@@ -1,0 +1,62 @@
+﻿/// <reference path="../utils/_variables.scss" />
+/// <reference path="../utils/mixins/_general.scss" />
+/// <reference path="../utils/mixins/_vendor-prefix.scss" />
+
+p {
+	font-weight: normal;
+	line-height: 26px;
+	margin: 0 0 15px;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+	@include transition(color .2s ease-in-out);
+
+	&:active {
+		outline: none;
+		ie-dummy: expression(this.hideFocus=true);
+	}
+
+	&:active, &:focus {
+		color: $link-hover;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: $link-hover;
+		text-decoration: none;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $txt-heading;
+	font-weight: 900;
+	margin: 20px 0 10px;
+	line-height: 1.5;
+}
+
+h1 {
+	@include fontSize(44px);
+}
+
+h2 {
+	@include fontSize(26px);
+}
+
+h3 {
+	@include fontSize(26px);
+}
+
+h4 {
+	@include fontSize(18px);
+}
+
+h5 {
+	@include fontSize(16px);
+}
