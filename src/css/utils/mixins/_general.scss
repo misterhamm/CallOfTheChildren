@@ -1,0 +1,140 @@
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin align-vertical() {
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+@mixin align-middle() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin box-shadow() {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+
+//calculate rem size and include px
+@function calculateRem( $size ) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+
+@mixin fontSize( $size ) {
+	font-size: $size; //Fallback in px
+	font-size: calculateRem($size);
+}
+
+
+@mixin clear-list() {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+// Background Image Cover
+@mixin bg-cover() {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+}
+
+
+// The mixin need to be applied to the container wrapping an img tag
+// Orientation should equal either 'landscape' or 'portrait'
+@mixin responsive-ratio($x, $y, $orientation) {
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: unquote( ( $y / $x ) * 100 + '%' );
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		max-width: none;
+
+		@if ($orientation == 'landscape') {
+			width: 100%;
+		}
+		@else {
+			height: 100%;
+		}
+	}
+}
+
+//example
+//.test-image-container {
+//    @include responsive-ratio(16,9,'landscape');
+//}
+
+
+@mixin multiLineEllipsis($font-size, $line-height, $lines-to-show) {
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	max-width: 100%;
+	height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+	margin: 0 auto;
+	font-size: $font-size;
+	font-size: calculateRem($font-size);
+	line-height: $line-height;
+	-webkit-line-clamp: $lines-to-show;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+// Tab Focus
+@mixin tab-focus() {
+	outline: none !important;
+}
+
+@mixin psuedoIcon($code, $fontSize: 22px) {
+	&:before {
+		content: #{'"\\' + $code + '"'};
+		font-family: 'lmc-icons';
+
+		@if $fontSize != '22px' {
+			@include fontSize($fontSize);
+		}
+		@else {
+			@include fontSize(22px);
+		}
+	}
+}
