@@ -37,6 +37,7 @@
     "lodash": "4.17.10",
     "normalize.css": "8.0.0",
     "nprogress": "0.2.0",
+    "prettier": "^1.13.7",
     "vue": "2.5.16",
     "vue-meta": "1.5.0",
     "vue-router": "3.0.1",
