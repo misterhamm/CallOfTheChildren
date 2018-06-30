@@ -1,0 +1,45 @@
+﻿/// <reference path="../utils/_variables.scss" />
+/// <reference path="../utils/mixins/_buttons.scss" />
+
+//Button styles for links, spans, etc.
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include btn();
+}
+
+.btn {
+
+	&.btn-primary {
+		@include solid-btn($btn-bg, $btn-bg-focus, $white);
+	}
+
+	&.btn-secondary {
+		@include solid-btn($btn-bg-focus, $btn-bg, $white);
+	}
+
+	&.btn-hollow {
+		@include hollow-btn($white, $btn-bg, $btn-bg);
+	}
+
+	&.btn-caret {
+		padding-right: 40px;
+		position: relative;
+
+		@include psuedoIcon('\f105');
+
+		&:before {
+		   position: absolute;
+		   right: 20px;
+		   top: 50%;
+		   transform: translateY(-50%);
+		}
+	}
+
+	&.disabled {
+		@include disabled-btn();
+	}
+}
