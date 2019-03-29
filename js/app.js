@@ -41,7 +41,7 @@ $('.submit').on('click touch', function() {
             <ul>
               ${photoRow}
               <li>Party: ${e.party}</li>
-              <li>Phone: ${e.phone}</li>
+              <li>Phone: ${e.phones}</li>
               <li><a href="${e.urls}">Website</a></li>
               ${channels}
             </ul>
