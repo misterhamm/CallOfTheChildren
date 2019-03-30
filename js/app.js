@@ -11,6 +11,8 @@ $('.form').on('submit', function(e) {
 
  function callApi(address) {
 
+  $('.officials').empty();
+
    fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${address}`).then(function(response) {
      return response.json();
     })
