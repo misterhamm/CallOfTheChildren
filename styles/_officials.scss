@@ -3,19 +3,21 @@
 .officials {
   color: $white;
   @include list-reset();
+  margin-top: 40px;
   text-align: center;
-
+  
   h2 {
     color: $white;
   }
-
+  
   img {
     height: auto;
     width: 200px;
   }
-
+  
   > li {
     background-color: $primary;
+    padding: 40px 0;
 
     &:nth-child(2n + 2) {
       background-color: $white;
@@ -28,6 +30,5 @@
 
   .official-details {
     @include list-reset();
-    padding: 40px 0;
   }
 }

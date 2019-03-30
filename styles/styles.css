@@ -6,7 +6,6 @@ p {
 
 a {
   color: #fdb84f;
-  text-decoration: none;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
@@ -18,12 +17,10 @@ a:active {
 
 a:active, a:focus {
   color: #f16962;
-  text-decoration: none;
 }
 
 a:hover {
   color: #f16962;
-  text-decoration: none;
 }
 
 h1,
@@ -1061,8 +1058,13 @@ select::-ms-expand {
   padding: 0 20px;
 }
 
+.form input[type=submit]:hover {
+  cursor: pointer;
+}
+
 .form input[type=text] {
   border: 1px solid #185c76;
+  padding: 10px 15px;
 }
 
 .officials {
@@ -1070,6 +1072,7 @@ select::-ms-expand {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -1084,6 +1087,7 @@ select::-ms-expand {
 
 .officials > li {
   background-color: #185c76;
+  padding: 40px 0;
 }
 
 .officials > li:nth-child(2n + 2) {
@@ -1099,6 +1103,5 @@ select::-ms-expand {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding: 40px 0;
 }
 /*# sourceMappingURL=styles.css.map */

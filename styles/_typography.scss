@@ -6,7 +6,6 @@ p {
 
 a {
 	color: $link;
-	text-decoration: none;
 	@include transition(color .2s ease-in-out);
 
 	&:active {
@@ -16,12 +15,10 @@ a {
 
 	&:active, &:focus {
 		color: $link-hover;
-		text-decoration: none;
 	}
 
 	&:hover {
 		color: $link-hover;
-		text-decoration: none;
 	}
 }
 

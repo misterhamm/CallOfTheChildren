@@ -10,8 +10,13 @@
 
   input[type=submit] {
     padding: 0 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   input[type=text] {
     border: 1px solid $primary;
+    padding: 10px 15px;
   }
 }

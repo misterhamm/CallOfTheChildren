@@ -27,6 +27,7 @@ $('.form').on('submit', function(e) {
         let officialChannels = e.channels;
         let channels = '';
         let photoRow = '';
+        let party = "N/A";
 
         if(officialChannels != null){
             officialChannels.forEach(e => {
@@ -38,13 +39,17 @@ $('.form').on('submit', function(e) {
           photoRow = `<li><img src="${e.photoUrl}"/></li>`
         }
 
+        if (e.party != null) {
+          party = e.party;
+        }
+
         $('.officials').append(
           `<li>
             <div class="container">
               <h2>${e.name}</h2>
               <ul class="official-details">
                 ${photoRow}
-                <li>Party: ${e.party}</li>
+                <li>Party: ${party}</li>
                 <li>Phone: ${e.phones}</li>
                 <li><a href="${e.urls}">Website</a></li>
                 ${channels}
