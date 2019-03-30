@@ -1085,17 +1085,18 @@ select::-ms-expand {
   width: 320px;
 }
 
-.officials > li {
+.officials .official {
   background-color: #185c76;
+  display: none;
   padding: 40px 0;
 }
 
-.officials > li:nth-child(2n + 2) {
+.officials .official:nth-child(2n + 2) {
   background-color: #FFFFFF;
   color: #333333;
 }
 
-.officials > li:nth-child(2n + 2) h2 {
+.officials .official:nth-child(2n + 2) h2 {
   color: #185c76;
 }
 

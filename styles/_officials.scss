@@ -15,8 +15,9 @@
     width: 320px;
   }
   
-  > li {
+  .official {
     background-color: $primary;
+    display: none;
     padding: 40px 0;
 
     &:nth-child(2n + 2) {

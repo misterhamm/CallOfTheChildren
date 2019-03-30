@@ -50,7 +50,7 @@ $('.form').on('submit', function(e) {
 
 
         $('.officials').append(
-          `<li>
+          `<li class="official"> 
             <div class="container">
               <h2>${e.name}</h2>
               <ul class="official-details">
@@ -63,6 +63,8 @@ $('.form').on('submit', function(e) {
             </div>
           </li>`
         )
+
+        $('.official').fadeIn();
       });
     });
   }
