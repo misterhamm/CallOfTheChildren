@@ -28,6 +28,7 @@ $('.form').on('submit', function(e) {
         let channels = '';
         let photoRow = '';
         let party = "N/A";
+        let website = '';
 
         if(officialChannels != null){
             officialChannels.forEach(e => {
@@ -43,6 +44,11 @@ $('.form').on('submit', function(e) {
           party = e.party;
         }
 
+        if (e.urls != null) {
+          website = `<a href="${e.urls}">Website</a>`;
+        }
+
+
         $('.officials').append(
           `<li>
             <div class="container">
@@ -51,7 +57,7 @@ $('.form').on('submit', function(e) {
                 ${photoRow}
                 <li>Party: ${party}</li>
                 <li>Phone: ${e.phones}</li>
-                <li><a href="${e.urls}">Website</a></li>
+                <li>${website}</li>
                 ${channels}
               </ul>
             </div>
