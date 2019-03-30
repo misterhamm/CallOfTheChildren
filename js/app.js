@@ -3,7 +3,8 @@ let apiKey = 'AIzaSyD3_QDaBntX4kwX5mgxTVvTihjg-zZSeOQ';
 
 
 
-$('.submit').on('click touch', function() {
+$('.form').on('submit', function(e) {
+  e.preventDefault();
  let address = $('.address').val();
  callApi(address);
 });
@@ -14,7 +15,7 @@ $('.submit').on('click touch', function() {
      return response.json();
     })
     .then(function(results) {
-      console.log(results)
+      //console.log(results)
       let offices = results.offices;
       let officials = results.officials;
 
