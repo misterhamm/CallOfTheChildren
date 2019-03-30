@@ -40,14 +40,16 @@ $('.form').on('submit', function(e) {
 
         $('.officials').append(
           `<li>
-            ${e.name}
-            <ul>
-              ${photoRow}
-              <li>Party: ${e.party}</li>
-              <li>Phone: ${e.phones}</li>
-              <li><a href="${e.urls}">Website</a></li>
-              ${channels}
-            </ul>
+            <div class="container">
+              <h2>${e.name}</h2>
+              <ul class="official-details">
+                ${photoRow}
+                <li>Party: ${e.party}</li>
+                <li>Phone: ${e.phones}</li>
+                <li><a href="${e.urls}">Website</a></li>
+                ${channels}
+              </ul>
+            </div>
           </li>`
         )
       });

@@ -1,8 +1,33 @@
 /// <reference path="_variables.scss"/>
 
 .officials {
+  color: $white;
+  @include list-reset();
+  text-align: center;
+
+  h2 {
+    color: $white;
+  }
+
   img {
     height: auto;
     width: 200px;
+  }
+
+  > li {
+    background-color: $primary;
+
+    &:nth-child(2n + 2) {
+      background-color: $white;
+      color: $txt-body;
+      h2  {
+        color: $primary;
+      }
+    }
+  }
+
+  .official-details {
+    @include list-reset();
+    padding: 40px 0;
   }
 }
