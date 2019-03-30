@@ -35,33 +35,11 @@ body {
 	-ms-flex-direction: column;
 	-webkit-flex-direction: column;
 	flex-direction: column;
-  
-  .bg {
-    content: '';
-    background-image: url('https://www.transparenttextures.com/patterns/diagmonds.png');
-    opacity: 0.5;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-  }
 }
 
 main {
 	padding-bottom: 20px;
-
-	&:after {
-		background: $gradient-footer;
-		bottom: 0;
-		content: '';
-		height: 190px;
-		position: absolute;
-		width: 100%;
-		z-index: -1;
-	}
+	padding-top: 60px;
 }
 
 img {

@@ -33,7 +33,7 @@ h4,
 h5,
 h6 {
   color: #185c76;
-  font-family: "Stalinist One", cursive;
+  font-family: "Comfortaa", cursive;
   font-weight: normal;
   margin: 20px 0 10px;
   line-height: 1.5;
@@ -42,6 +42,7 @@ h6 {
 h1 {
   font-size: 44px;
   font-size: 2.75rem;
+  text-align: center;
 }
 
 h2 {
@@ -946,7 +947,7 @@ body, html {
 
 body {
   color: #333333;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -963,32 +964,9 @@ body {
           flex-direction: column;
 }
 
-body .bg {
-  content: '';
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
-  opacity: 0.5;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  height: 100%;
-}
-
 main {
   padding-bottom: 20px;
-}
-
-main:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(#F7F8F9), to(#FFFFFF));
-  background: linear-gradient(0deg, #F7F8F9 0%, #FFFFFF 100%);
-  bottom: 0;
-  content: '';
-  height: 190px;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+  padding-top: 60px;
 }
 
 img {
@@ -1001,7 +979,7 @@ object, embed, audio, video {
 }
 
 i, em, .italic {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: italic;
 }
 
@@ -1015,7 +993,7 @@ b i, i b {
 }
 
 label {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -1066,11 +1044,24 @@ select::-ms-expand {
   display: none;
 }
 
-.form button {
-  padding: 10px;
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.form input {
+.form .address-input {
+  margin-right: 20px;
+}
+
+.form input[type=submit] {
+  padding: 0 20px;
+}
+
+.form input[type=text] {
   border: 1px solid #185c76;
 }
 

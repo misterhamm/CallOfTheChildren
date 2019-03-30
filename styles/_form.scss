@@ -1,10 +1,17 @@
 /// <reference path="_variables.scss"/>
 
 .form {
-  button {
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+
+  .address-input {
+    margin-right: 20px;
   }
-  input {
+
+  input[type=submit] {
+    padding: 0 20px;
+  }
+  input[type=text] {
     border: 1px solid $primary;
   }
 }
