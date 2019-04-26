@@ -56,11 +56,11 @@ function callApi(address) {
               <ul class="official-details">
                 ${photoRow}
                 <li>Party: ${party}</li>
-                <li>Phone: ${e.phones}</li>
+                <li>Phone: <a href="tel:${e.phones}">${e.phones}</a></li>
                 <li>${website}</li>
                 ${channels}
 
-                <a href="/message-builder.html?rep=${encodedName}">Send ${e.name} A Message</a>
+                <a href="/send-message.html?rep=${encodedName}">Send ${e.name} A Message</a>
               </ul>
             </div>
           </li>`

@@ -1,0 +1,28 @@
+/// <reference path="_variables.scss"/>
+
+.service-section {
+  display: flex;
+
+  &-item {
+    align-items: center;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    min-height: 275px;
+    width: 33.333333%;
+
+    &:nth-child(2) {
+      background-color: $yellow;
+    }
+    &:nth-child(3) {
+      background-color: $gray-1;
+    }
+    
+    a {
+      color: $txt-body;
+      font-size: 36px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
