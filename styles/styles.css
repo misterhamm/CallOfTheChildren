@@ -1062,7 +1062,7 @@ select::-ms-expand {
   cursor: pointer;
 }
 
-.form input[type=text] {
+.form input[type=text], .form input[type=number], .form textarea {
   border: 1px solid #185c76;
   padding: 10px 15px;
 }

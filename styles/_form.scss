@@ -15,7 +15,7 @@
       cursor: pointer;
     }
   }
-  input[type=text] {
+  input[type=text], input[type=number], textarea {
     border: 1px solid $primary;
     padding: 10px 15px;
   }
