@@ -1,16 +1,28 @@
 /// <reference path="_variables.scss"/>
+/// <reference path="_mixins.scss"/>
 
 .service-section {
   display: flex;
+  flex-direction: column;
+
+  @include desktop-narrow {
+    flex-direction: row;
+  }
 
   &-item {
     align-items: center;
     background-color: $blue;
+    color: $txt-body;
     display: flex;
+    font-size: 36px;
+    font-weight: bold;
     justify-content: center;
     min-height: 275px;
-    width: 33.333333%;
+    text-decoration: none;
 
+    @include desktop-narrow {
+      width: 33.333333%;
+    }
     &:nth-child(2) {
       background-color: $yellow;
     }
@@ -19,10 +31,7 @@
     }
     
     a {
-      color: $txt-body;
-      font-size: 36px;
-      font-weight: bold;
-      text-decoration: none;
+      
     }
   }
 }
