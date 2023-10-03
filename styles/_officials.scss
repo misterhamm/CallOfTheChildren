@@ -6,7 +6,7 @@
   margin-top: 40px;
   text-align: center;
   
-  h2 {
+  h2,h3 {
     color: $white;
   }
   
@@ -23,7 +23,7 @@
     &:nth-child(2n + 2) {
       background-color: $white;
       color: $txt-body;
-      h2  {
+      h2,h3  {
         color: $primary;
       }
     }

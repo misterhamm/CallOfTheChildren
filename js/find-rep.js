@@ -1,5 +1,7 @@
 let apiKey = 'AIzaSyD3_QDaBntX4kwX5mgxTVvTihjg-zZSeOQ';
 
+//TODO: Add Google geolocation typeahead to form address correctly
+
 $('.rep-search').on('submit', function (e) {
   e.preventDefault();
   let address = $('.address').val();
@@ -18,16 +20,21 @@ function callApi(address) {
       let offices = results.offices;
       let officials = results.officials;
 
+      offices.forEach(e => {
+        let name = e.name;
+        e.officialIndices.forEach(e => {
+          officials[e].title = name;
+        });
+      });
 
-
-      officials.forEach(e => {
+      officials.forEach((e,i) => {
         let officialChannels = e.channels;
         let channels = '';
         let photoRow = '';
         let party = "N/A";
         let website = '';
 
-        if (officialChannels != null) {
+        if (officialChannels) {
           officialChannels.forEach(e => {
             if (e.type != "GooglePlus") {
               channels += `<li><a href="http://www.${e.type}.com/${e.id}" target="_blank">${e.type}</a></li>`
@@ -53,6 +60,7 @@ function callApi(address) {
           `<li class="official"> 
             <div class="container">
               <h2>${e.name}</h2>
+              <h3>${e.title}</h3>
               <ul class="official-details">
                 ${photoRow}
                 <li>Party: ${party}</li>
